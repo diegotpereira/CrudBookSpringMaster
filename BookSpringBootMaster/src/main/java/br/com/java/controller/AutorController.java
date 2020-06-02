@@ -23,7 +23,7 @@ public class AutorController {
 	@GetMapping("/")
 	public ModelAndView findAll() {
 		
-		ModelAndView mv = new ModelAndView("/post");
+		ModelAndView mv = new ModelAndView("/home");
 		mv.addObject("autores", service.findAll());
 		
 		return mv;
@@ -33,7 +33,7 @@ public class AutorController {
 	@GetMapping("/add")
 	public ModelAndView add(Autor autor) {
 		
-		ModelAndView mv = new ModelAndView("/postAdd");
+		ModelAndView mv = new ModelAndView("/cadAdd");
 		mv.addObject("autor", autor);
 		
 		return mv;
