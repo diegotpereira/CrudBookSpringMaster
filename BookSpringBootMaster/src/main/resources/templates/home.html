@@ -22,6 +22,7 @@
 							<th>Autor</th>
 							<th>T&iacute;tulo</th>
 							<th>Data</th>
+							<th>Descrição</th>
 							<th></th>
 						</tr>
 					</thead>
@@ -31,6 +32,7 @@
 							<td th:text="${autor.nome}"></td>
 							<td th:text="${autor.titulo}"></td>
 							<td th:text="${#dates.format(autor.data, 'dd/MM/yyyy')}"></td>
+							<td th:text="${autor.texto}"></td>
 							<td>
 								<div class="btn-group pull-right">
 							   		<a class="btn btn-sm btn-primary" th:href="@{/edit/{id}(id=${autor.id})}" >Editar</a>
